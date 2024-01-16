@@ -19,7 +19,8 @@ server.use(express.static(path.join(__dirname, "../public")))
 
 server.use(mainRoutes)
 server.use((req, res) => {
-    res.send("Page Not Found - CSR Error")
+    res.render("pages/404")
+    // res.send("Page Not Found - CSR Error")
 })
 
 server.listen(process.env.PORT)
